@@ -22,7 +22,7 @@
 
 Name:		sonic-sysguard-library
 Version:	6.6.3
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 URL:            https://github.com/Sonic-DE/sonic-sysguard-library
 # %if 0%{?git:1}
 # Source0:	%url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
@@ -61,13 +61,21 @@ BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6GlobalAccel)
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6NewStuff)
-BuildRequires: cmake(KF6Auth)
+
+# pending rename
+# BuildRequires: cmake(KF6Auth)
+BuildRequires: %{_lib}SonicFrameworksAuth-devel
+
 BuildRequires: cmake(KF6Completion)
 BuildRequires: cmake(KF6WidgetsAddons)
 BuildRequires: cmake(KF6IconThemes)
 BuildRequires: cmake(KF6ConfigWidgets)
 BuildRequires: cmake(KF6Service)
-BuildRequires: cmake(KF6KIO)
+
+# pending rename
+#BuildRequires: cmake(KF6KIO)
+BuildRequires: %{_lib}SonicFrameworksIO-devel
+
 BuildRequires: cmake(KF6JobWidgets)
 BuildRequires: pkgconfig(libnl-3.0)
 BuildRequires: pkgconfig(libpcap)
