@@ -21,13 +21,13 @@
 %define desname %mklibname SonicDELibksysguard-designer -d
 
 Name:		sonic-sysguard-library
-Version:	6.6.3
-Release:	%{?git:0.%{git}.}2
+Version:	6.6.4
+Release:	%{?git:0.%{git}.}1
 URL:            https://github.com/Sonic-DE/sonic-sysguard-library
 # %if 0%{?git:1}
 # Source0:	%url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
 # %else
-Source0: %url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
+Source0: %url/archive/%version/%name-%version.tar.gz
 # %endif
 Summary: SonicDE Frameworks 6 system monitoring framework
 
