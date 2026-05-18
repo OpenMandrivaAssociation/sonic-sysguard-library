@@ -54,11 +54,13 @@ BuildRequires: cmake(ECM)
 
 # pending rename
 # BuildRequires: cmake(Plasma) >= 5.90.0
+# BuildRequires: cmake(KF6GlobalAccel)
 BuildRequires: %{_lib}SonicDE-devel
+BuildRequires: %{_lib}SonicFrameworksKeybind-devel
 
 BuildRequires: cmake(KF6Config)
 BuildRequires: cmake(KF6I18n)
-BuildRequires: cmake(KF6GlobalAccel)
+
 BuildRequires: cmake(KF6Declarative)
 BuildRequires: cmake(KF6NewStuff)
 
@@ -100,6 +102,9 @@ Conflicts: libksysguard
 %description
 SonicDE Frameworks 6 system monitoring framework.
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/libksysguard.categories
 %{_datadir}/dbus-1/interfaces/org.kde.ksystemstats1.xml
@@ -133,6 +138,7 @@ Conflicts: %{_lib}KSysGuardSystemStats
 %files -n %{libsonicsgrd}
 %{_libdir}/libKSysGuardSystemStats.so.2
 %{_libdir}/libKSysGuardSystemStats.so.6*
+%{_libdir}/libKSysGuardSystemStats.so
 
 #----------------------------------------------------------------------------
 
@@ -148,6 +154,7 @@ Conflicts: %{_lib}processcore
 %files -n %{libprocesscore}
 %{_libdir}/libprocesscore.so.%{processcore_major}
 %{_libdir}/libprocesscore.so.6*
+%{_libdir}/libprocesscore.so
 
 #----------------------------------------------------------------------------
 
@@ -163,6 +170,7 @@ Conflicts:  %{_lib}KSysGuardFormatter
 %files -n %{libformatter}
 %{_libdir}/libKSysGuardFormatter.so.%{formatter_major}
 %{_libdir}/libKSysGuardFormatter.so.6*
+%{_libdir}/libKSysGuardFormatter.so
 
 #----------------------------------------------------------------------------
 
@@ -178,6 +186,7 @@ Conflicts: %{_lib}KSysGuardSensorFaces
 %files -n %{libsensorfaces}
 %{_libdir}/libKSysGuardSensorFaces.so.%{sensorfaces_major}
 %{_libdir}/libKSysGuardSensorFaces.so.6*
+%{_libdir}/libKSysGuardSensorFaces.so
 
 #----------------------------------------------------------------------------
 
@@ -193,6 +202,7 @@ Conflicts: %{_lib}KSysGuardSensors
 %files -n %{libsensors}
 %{_libdir}/libKSysGuardSensors.so.%{sensors_major}
 %{_libdir}/libKSysGuardSensors.so.6*
+%{_libdir}/libKSysGuardSensors.so
 
 #----------------------------------------------------------------------------
 
@@ -212,5 +222,7 @@ Conflicts: %{_lib}KF6Libsysguard-devel
 
 %files -n %{devname}
 %{_includedir}/*
-%{_libdir}/*.so
-%{_libdir}/cmake/KSysGuard
+# %{_libdir}/*.so
+
+# pending rename
+# %{_libdir}/cmake/KSysGuard
