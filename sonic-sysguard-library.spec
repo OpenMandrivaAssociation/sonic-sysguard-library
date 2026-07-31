@@ -21,7 +21,7 @@
 %define desname %mklibname SonicDELibksysguard-designer -d
 
 Name:		sonic-sysguard-library
-Version:	6.6.5
+Version:	6.7.2
 Release:	%{?git:0.%{git}.}1
 URL:            https://github.com/Sonic-DE/sonic-sysguard-library
 # %if 0%{?git:1}
