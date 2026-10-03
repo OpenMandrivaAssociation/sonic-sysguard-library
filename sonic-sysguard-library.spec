@@ -102,9 +102,6 @@ Conflicts: libksysguard
 %description
 SonicDE Frameworks 6 system monitoring framework.
 
-%install -a
-rm -rf %{buildroot}/%{_libdir}/cmake
-
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/libksysguard.categories
 %{_datadir}/dbus-1/interfaces/org.kde.ksystemstats1.xml
@@ -223,6 +220,4 @@ Conflicts: %{_lib}KF6Libsysguard-devel
 %files -n %{devname}
 %{_includedir}/*
 # %{_libdir}/*.so
-
-# pending rename
-# %{_libdir}/cmake/KSysGuard
+%{_libdir}/cmake/KSysGuard
