@@ -7,7 +7,7 @@
 
 %define sonicsgrd_major 10
 %define libsonicsgrd %mklibname SonicDESysGuardSystemStats
-%define processcore_major 10
+%define processcore_major 11
 %define libprocesscore %mklibname sonicprocesscore
 %define formatter_major 2
 %define libformatter %mklibname SonicDESysGuardFormatter
