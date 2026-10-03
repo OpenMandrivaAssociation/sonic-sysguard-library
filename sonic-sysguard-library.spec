@@ -103,6 +103,7 @@ Conflicts: libksysguard
 SonicDE Frameworks 6 system monitoring framework.
 
 %files -f %{name}.lang
+%{_bindir}/ksysguard-identify
 %{_datadir}/qlogging-categories6/libksysguard.categories
 %{_datadir}/dbus-1/interfaces/org.kde.ksystemstats1.xml
 %{_libdir}/libexec/kf6/kauth/ksysguardprocesslist_helper
